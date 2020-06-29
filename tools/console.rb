@@ -20,9 +20,10 @@ v2 = Viewer.new("YigahSoFly")
 v3 = Viewer.new("KevSlayAllDay")
 
 r1 = Review.new(v1, m1, 10)
-r2 = Review.new(v1, m2, 9)
+r2 = Review.new(v1, m2, 6)
 r3 = Review.new(v2, m1, 8)
 r4 = Review.new(v3, m3, 7)
+
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
