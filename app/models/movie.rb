@@ -48,13 +48,13 @@ def reviewers
 
     self.all.select.max_by do |mo|
          mo
-         binding.pry
+        # binding.pry
     end
 
   end
 
 
 
-  
+
 
 end
