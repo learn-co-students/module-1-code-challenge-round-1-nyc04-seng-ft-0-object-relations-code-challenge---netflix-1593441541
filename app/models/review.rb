@@ -19,7 +19,7 @@ class Review
     end
 
     def movie
-        Review.new.movie
+        Review.new.movie(title)
     end
 
 
