@@ -16,32 +16,27 @@ class Movie
   end
 
   def reviews
-    Review.all.select do |review|
-      review.movie == self
-    end
+    Review.all.select {|review| review.movie == self}
   end
 
   def reviewers
-    reviews.map do |review|
-      review.viewer
-    end
+    reviews.map {|review| review.viewer}
   end
   
   def total_ratings
-    reviews.sum do |review|
-      review.rating
-    end
+    reviews.sum {|review| review.rating}
   end
 
   def average_rating
-    (self.total_ratings/reviews.count)
+    self.total_ratings/reviews.count
+  end
+
+  def self.sorted_by_rating
+    self.all.sort_by {|movie| movie.average_rating}
   end
   
   def self.highest_rated
-    self.all.sort_by do |movie|
-      movie.average_rating
-    end
-    .last
+    self.sorted_by_rating.last
   end
 
 end

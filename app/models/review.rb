@@ -6,7 +6,7 @@ class Review
     def initialize(viewer, movie, rating)
         @viewer = viewer
         @movie = movie
-        @rating = rating
+        @rating = rating.to_f
         save
     end
 

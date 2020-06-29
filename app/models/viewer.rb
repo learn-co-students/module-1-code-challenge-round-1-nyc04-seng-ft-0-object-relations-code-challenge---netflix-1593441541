@@ -16,15 +16,11 @@ class Viewer
   end
 
   def reviews
-    Review.all.select do |review|
-      review.viewer == self
-    end
+    Review.all.select {|review| review.viewer == self}
   end
 
   def reviewed_movies
-    reviews.map do |review|
-      review.movie
-    end
+    reviews.map {|review| review.movie}
   end
 
   def reviewed_movie?(movie)
@@ -32,13 +28,11 @@ class Viewer
   end
   
   def find_review(movie)
-    reviews.find do |review|
-      review.movie == movie
-    end
+    reviews.find {|review| review.movie == movie}
   end
 
   def rate_movie(movie, rating)
-      reviewed_movies.include?(movie) ? find_review(movie).rating = rating : Review.new(self, movie, rating)
+      reviewed_movie?(movie) ? find_review(movie).rating = rating : Review.new(self, movie, rating)
   end
 
 end
