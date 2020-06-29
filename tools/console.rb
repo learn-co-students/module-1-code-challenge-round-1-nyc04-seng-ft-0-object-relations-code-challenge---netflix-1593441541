@@ -22,7 +22,7 @@ r1 = Review.new(v1,m1, 5)
 r2 = Review.new(v2,m1, 3)
 r3 = Review.new(v2,m3, 4)
 
-v1.reviewed_movie?(m1)
+v1.rate_movie(m1,4)
 
 
 

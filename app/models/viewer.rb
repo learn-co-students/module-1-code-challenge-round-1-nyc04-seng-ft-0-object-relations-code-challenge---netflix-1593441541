@@ -30,5 +30,16 @@ class Viewer
     movies.include?(movie)
   end
 
-  def
+  def rate_movie(movie, rating)
+    if !self.reviewed_movie?(movie)
+      Review.new(self, movie, rating)
+    else
+      # access my last review for this movie
+      self.reviewed_movies.select do |rev|
+        rev.rating == rating
+      end
+    end
+  end
+
+  
 end
