@@ -11,9 +11,33 @@ end
 # so they will be available to test and play around with in your console
 
 
+movie1 = Movie.new("Spider Man 99")
+movie2 = Movie.new("LORD- Fellowship")
 
+#person
+viewer1 = Viewer.new("Meliodas")
+viewer2 = Viewer.new("King")
+
+#reviews made
+review1 = Review.new(viewer1, movie1, 10)
+review2 = Review.new(viewer1, movie2, 1000)
+review3 = Review.new(viewer2, movie2, 1)
+
+# puts movie1.title
+# puts""
+# puts viewer1.username
+# puts""
+# puts review1.rating
+# puts""
+# pp review1.viewer
+# puts""
+# pp review1.movie
+# puts""
+# pp viewer1.reviews
+# puts""
+# pp viewer1.reviewed_movies
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
-binding.pry
+#binding.pry
 0
