@@ -1,3 +1,4 @@
+require 'pry'
 class Viewer
   attr_accessor :username
 
@@ -11,5 +12,23 @@ class Viewer
   def self.all
     @@all
   end
+
+  def reviews
+    Review.all.select do |rev_in|
+      rev_in.viewer == self
+    end
+  end
+
+  def reviewed_movies
+    self.reviews.map do |rev|
+        rev.movie
+      end
+  end
   
+  def reviewed_movie?(movie)
+    movies = self.reviewed_movies
+    movies.include?(movie)
+  end
+
+  def
 end
