@@ -22,6 +22,10 @@ u1 = Viewer.new("cool_dude")
 u2 = Viewer.new("dad_movies")
 u3 = Viewer.new("mamama123")
 
+u1.reviewed_movie?('Bad Boys')
+#rate_movie(movie, rating)
+u1.rate_movie(m1, 7)
+
 # REVIEW (viewer, movie, rating)
 
 r1 = Review.new(u1, m1, 7)
