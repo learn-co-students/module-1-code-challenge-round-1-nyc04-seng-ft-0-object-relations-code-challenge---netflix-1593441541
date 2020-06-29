@@ -1,17 +1,25 @@
 class Review
   attr_accessor :rating
-  attr_reader :viewer, :movie, :reader
+  attr_reader :user, :title
   @@all = []
 
-  def initialize(viewer, movie, rating)
-    @viewer = viewer
-    @movie = movie
+  def initialize(user, title, rating)
+    @user = user
+    @title = title
     @rating = rating
     @@all << self
   end
 
   def self.all
     @@all
+  end
+
+  def viewer
+    Viewer.all.find { |viewer| viewer == self.user }
+  end
+
+  def movie
+    Movie.all.find { |movie| movie.title == self.title }
   end
 
   def update_review=(rating)

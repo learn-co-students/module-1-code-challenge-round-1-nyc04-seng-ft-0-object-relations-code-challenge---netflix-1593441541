@@ -18,30 +18,29 @@ class Viewer
     @username = username
   end
 
-  def rate_movie(movie, rating)
-    # Validates if user has reviewed movie. Updates rating if true, creates new rating if false
-    reviewed_movie?(movie) ? select_movie(movie).update_review=(rating) : Review.new(self, movie, rating)
-    select_movie(movie)
-  end
-
   def reviews
     # All viewer review objects
-    Review.all.select{ |reviews| reviews.viewer == self }
+    Review.all.select{ |reviews| reviews.user == self }
   end
 
   def movies
     # Returns all movies associated with viewer
-    reviews.map(&:movie)
+    reviews.map(&:title)
   end
 
-  def select_movie(movie)
-    # Helper method to select movie instance that user has reviewed
-    reviews.find { |review| review.movie == movie && review.viewer == self }
+  def rate_movie(title, rating)
+    # Validates if user has reviewed movie. Updates rating if true, creates new rating if false
+    reviewed_movie?(title) ? select_movie(title).update_review=(rating) : Review.new(self, title, rating)
+    select_movie(title)
   end
 
-  def reviewed_movie?(movie)
+  def reviewed_movie?(title)
     # Returns True if user has reviewed movie
-    reviews.find { |review| review.movie == movie && review.viewer == self } ? true : false
+    reviews.find { |review| review.title == title && review.user == self } ? true : false
   end
 
+  def select_movie(title)
+    # Helper method to select movie instance that user has reviewed
+    reviews.find { |review| review.title == title && review.user == self }
+  end
 end

@@ -13,6 +13,7 @@ end
 m1 = Movie.new('Avengers')
 m2 = Movie.new('Black Panther')
 m3 = Movie.new('Captain America')
+m4 = Movie.new('Black Widow')
 
 v1 = Viewer.new('Chris')
 v2 = Viewer.new('Caitlin')
@@ -25,6 +26,7 @@ v2.rate_movie(m1, 9)
 v2.rate_movie(m2, 9)
 v3.rate_movie(m3, 6)
 
+r1 = Review.new(v2, m4, 10)
 
 
 

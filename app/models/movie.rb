@@ -14,29 +14,27 @@ class Movie
   end
 
   def change_title=(title)
-    # updade title value
+    # Update title value
     @title = title
   end
 
   def reviews
-    Review.all.select{ |reviews| reviews.movie == self}
+    # Returns all reviews for a movie
+    Review.all.select{ |reviews| reviews.title == self }
   end
 
-  def viewers
-    reviews.map(&:viewer)
+  def reviewers
+    # Returns all reviewers who have reviewed the movie
+    reviews.map(&:user)
   end
 
   def average_rating
     rating = 0
-    total = reviews.map{ |review| rating += review.rating }
-    rating
+    total = reviews.map { |review| rating += review.rating }
     rating / total.length
-   # movie.ratings.reduce(+:) / movie.ratings.count
   end
 
   def self.highest_rated
-    self.all.max_by{|movie| movie.average_rating}
+    self.all.max_by(&:average_rating)
   end
-  
-  
 end
