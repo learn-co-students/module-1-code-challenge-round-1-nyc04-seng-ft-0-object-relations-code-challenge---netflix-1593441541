@@ -25,13 +25,14 @@ v5=Viewer.new("FranDa")
 v6=Viewer.new("Grater")
 
 
-r1=v1.rate_movie(m1,10)
-r1=v2.rate_movie(m1,8)
-r1=v3.rate_movie(m1,5)
-r1=v4.rate_movie(m1,8)
-r1=v5.rate_movie(m2,10)
-r1=v6.rate_movie(m4,5)
-r1=v6.rate_movie(m5,4)
+r1=Review.new(v1,m1,10)
+r2=Review.new(v2,m1,4)
+r3=Review.new(v5,m2,4)
+r4=Review.new(v6,m1,1)
+r5=Review.new(v4,m5,5)
+r6=Review.new(v3,m1,10)
+r7=Review.new(v1,m4,10)
+
 
 
 
