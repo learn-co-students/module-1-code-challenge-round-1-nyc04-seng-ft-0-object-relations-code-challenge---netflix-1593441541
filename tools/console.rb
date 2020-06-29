@@ -17,6 +17,8 @@ m3 = Movie.new("Frozen")
 v1 = Viewer.new("sarah")
 v2 = Viewer.new("paul")
 v3 = Viewer.new("david")
+v4 = Viewer.new("lady")
+v5 = Viewer.new("lorraine")
 
 # viewer, movie, rating
 
@@ -25,8 +27,12 @@ r2 = Review.new(v1, m2, 3)
 r3 = Review.new(v3, m2, 5)
 r4 = Review.new(v3, m1, 2)
 r5 = Review.new(v2, m3, 5)
-r6 = Review.new(v1, m3, 4)
-
+r6 = Review.new(v4, m3, 4)
+r7 = Review.new(v2, m1, 1)
+r8 = Review.new(v5, m3, 5)
+r9 = Review.new(v2, m2, 2)
+r10 = Review.new(v4, m1, 5)
+r11 = Review.new(v5, m1, 4)
 
 
 

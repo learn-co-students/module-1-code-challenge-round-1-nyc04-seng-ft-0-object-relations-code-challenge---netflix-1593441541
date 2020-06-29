@@ -28,8 +28,14 @@ class Viewer
     if !reviewed_movie?(movie)
       Review.new(self, movie, rating)
     else
-      rating_to_change = self.reviews.find { |review| review.movie == movie }
+      rating_to_change = reviews.find { |review| review.movie == movie }
       rating_to_change.rating = rating
     end
+  end
+
+  # made extra methods during extra time
+  def favorite_movie
+    highest_review = reviews.max_by { |review| review.rating }
+    highest_review.movie
   end
 end

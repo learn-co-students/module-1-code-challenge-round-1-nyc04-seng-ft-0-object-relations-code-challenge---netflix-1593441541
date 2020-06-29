@@ -8,11 +8,6 @@ A `Movie` has many `Review`s. A `Viewer` has many `Review`s. A `Review` belongs 
 
 `Viewer` - `Movie` is a many to many relationship.
 
-movie -< review
-viewer -< review
-
-viewer >-< movie
-
 **Note**: You should draw your domain on paper or on a whiteboard _before you start coding_. Remember to identify a single source of truth for your data.
 
 ## Topics

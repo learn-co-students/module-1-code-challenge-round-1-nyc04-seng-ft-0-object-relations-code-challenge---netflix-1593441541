@@ -13,7 +13,7 @@ class Movie
   end
 
   def self.highest_rated
-    self.all.max_by { |movie| movie.average_rating }
+    all.max_by { |movie| movie.average_rating }
   end
 
   def reviews
@@ -25,8 +25,13 @@ class Movie
   end
 
   def average_rating
-    total = self.reviews.sum { |review| review.rating }
+    total = reviews.sum { |review| review.rating }
     # as a float?
     total / reviews.count.to_f
+  end
+
+  # made extra methods during extra time
+  def self.most_reviewed
+    all.max_by { |movie| movie.reviews.count }
   end
 end
