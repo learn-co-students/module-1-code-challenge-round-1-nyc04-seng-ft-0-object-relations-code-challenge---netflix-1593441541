@@ -25,6 +25,14 @@ v5=Viewer.new("FranDa")
 v6=Viewer.new("Grater")
 
 
+r1=v1.rate_movie(m1,10)
+r1=v2.rate_movie(m1,8)
+r1=v3.rate_movie(m1,5)
+r1=v4.rate_movie(m1,8)
+r1=v5.rate_movie(m2,10)
+r1=v6.rate_movie(m4,5)
+r1=v6.rate_movie(m5,4)
+
 
 
 
