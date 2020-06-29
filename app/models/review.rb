@@ -1,9 +1,12 @@
 class Review
-
+    attr_reader :viewer, :movie, :rating
     @@all = []
-    
-    def initialize()
-        
+
+    def initialize(viewer, movie, rating)
+        @viewer = viewer
+        @movie = movie
+        @rating = rating
+        save
     end
 
     def save
