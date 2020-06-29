@@ -28,8 +28,6 @@ review5 = Review.new(viewer3, ironman, 3)
 review6 = Review.new(viewer3, avengers, 5)
 review7 = Review.new(viewer4, spideyverse, 4)
 
-
-
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
 0

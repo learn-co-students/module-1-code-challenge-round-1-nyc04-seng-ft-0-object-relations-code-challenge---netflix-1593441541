@@ -1,6 +1,5 @@
 class Viewer
   attr_accessor :username
-
   @@all = []
 
   def initialize(username)
