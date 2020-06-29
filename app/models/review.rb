@@ -19,7 +19,7 @@ class Review
   end
 
   def movie
-    Movie.all.find { |movie| movie.title == self.title }
+    Movie.all.find { |movie| movie.title == self.title.title }
   end
 
   def update_review=(rating)
