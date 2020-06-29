@@ -15,6 +15,12 @@ m2 = Movie.new("the fountain")
 m3 = Movie.new("one flew over the cuckoo's nest")
 m4 = Movie.new("machuca")
 
+u1 = Viewer.new("ZeroCool")
+u2 = Viewer.new("Teflon")
+u3 = Viewer.new("Barbi")
+u4 = Viewer.new("Donut")
+u5 = Viewer.new("Neo")
+
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
