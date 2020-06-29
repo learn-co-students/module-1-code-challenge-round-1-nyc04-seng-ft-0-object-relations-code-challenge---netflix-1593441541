@@ -32,7 +32,7 @@ class Viewer
   end
 
   def rate_movie(movie, rating)
-      reviewed_movie?(movie) ? find_review(movie).rating = rating : Review.new(self, movie, rating)
+      reviewed_movie?(movie) ? find_review(movie).rating = rating.to_f : Review.new(self, movie, rating)
   end
 
 end
