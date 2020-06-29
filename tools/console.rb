@@ -15,11 +15,13 @@ movie1 = Movie.new("Spider Man 99")
 movie2 = Movie.new("LORD- Fellowship")
 
 #person
-viewer1 = Viewer.new("Mackington")
+viewer1 = Viewer.new("Meliodas")
+viewer2 = Viewer.new("King")
 
 #reviews made
 review1 = Review.new(viewer1, movie1, 10)
 review2 = Review.new(viewer1, movie2, 1000)
+review3 = Review.new(viewer2, movie2, 1)
 
 # puts movie1.title
 # puts""
@@ -32,7 +34,7 @@ review2 = Review.new(viewer1, movie2, 1000)
 # pp review1.movie
 # puts""
 # puts viewer1.reviews
-# puts viewer1.reviewed_movies
+pp viewer1.reviewed_movies
 #`Review#viewer`
 #  - return Viewr object not just the string
 

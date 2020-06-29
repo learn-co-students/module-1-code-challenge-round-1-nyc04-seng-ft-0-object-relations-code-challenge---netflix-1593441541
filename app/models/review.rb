@@ -17,6 +17,6 @@ class Review
         @@all
     end
 
-#   - `Review#viewer`
-#   - returns the `Viewer` instance associated with the `Review` instance
+    #returns the viewer who made this review
+
 end

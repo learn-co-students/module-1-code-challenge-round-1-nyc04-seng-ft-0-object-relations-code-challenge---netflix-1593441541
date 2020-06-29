@@ -22,7 +22,7 @@ class Viewer
 
   #find all movies this viewer watched
   def reviewed_movies
-    Review.all.collect {|review| review.movie}
+    review = Review.all.find_all {|review| review.viewer == self}
   end
 
 end
