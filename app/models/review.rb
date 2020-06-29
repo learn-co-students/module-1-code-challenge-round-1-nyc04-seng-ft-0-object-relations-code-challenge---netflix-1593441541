@@ -14,6 +14,10 @@ class Review
     @@all
   end
 
+  def return_rating
+    self.rating
+  end
+
   def viewer
     Viewer.all.find { |viewer| viewer == self.user }
   end
