@@ -18,5 +18,7 @@ class Viewer
   end
 
   #returns an array of `Movie` instances reviewed by the `Viewer` instance.
-  
+  def reviewed_movies
+    self.reviews.select {|r| r.movie == self}
+  end
 end
