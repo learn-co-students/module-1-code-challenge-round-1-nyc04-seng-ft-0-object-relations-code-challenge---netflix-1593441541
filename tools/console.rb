@@ -10,7 +10,8 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
-
+# username
+v1 = Viewer.new("Zeus_The_Mighty")
 
 
 
