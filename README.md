@@ -66,12 +66,12 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 #### Review
 
-- `Review#initialize(viewer, movie, rating)`
-  - `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a rating (number)
+- #`Review#initialize(viewer, movie, rating)`
+  #- `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a rating (number)
 - `Review#rating`
   - returns the rating for the `Review` instance
-- `Review.all`
-  - returns an array of all initialized `Review` instances
+#- `Review.all`
+ # - returns an array of all initialized `Review` instances
 
 ### Object Relationship Methods
 

@@ -1,6 +1,11 @@
+require 'pry'
+
 class Review
 
-  
+    #- `Review#viewer`
+    #- returns the `Viewer` instance associated with the `Review` instance
+  #- `Review#movie`
+   # - returns the `Movie` instance associated with the `Review` instance
   
     
     @@all = []
@@ -9,12 +14,24 @@ class Review
         @viewer = viewer
         @movie = movie
         @rating = rating 
-        @@all << self
+        self.class.all << self
     end
 
-    def rating
+    def ratings
         Review.all.map do |review_instance|
             review_instance.rating
+        end
+    end
+
+    def viewers
+        Review.all.select do |review_instance|
+            review_instance.viewer
+        end
+    end
+
+    def movies
+        Review.all.select do |review_instance|
+            review_instance.movie
         end
     end
 

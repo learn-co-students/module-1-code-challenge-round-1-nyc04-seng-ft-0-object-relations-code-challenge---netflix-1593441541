@@ -28,7 +28,6 @@ r1 = Review.new(u1, m1, 7)
 r2 = Review.new(u2, m2, 7)
 r3 = Review.new(u3, m3, 7)
 
-p r1
 
 
 
