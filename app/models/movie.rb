@@ -12,4 +12,16 @@ class Movie
     @@all
   end
 
+  def reviews
+    Review.all.select {|i| i.movie == self}
+  end
+
+  def reviewers
+    reviews.map {|i| i.viewer}
+  end
+
+  # def average_rating
+  #   reviews.each {|i| binding.pry}
+  # end
+
 end
