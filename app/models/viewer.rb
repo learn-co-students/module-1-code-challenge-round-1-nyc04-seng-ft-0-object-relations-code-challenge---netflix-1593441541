@@ -11,5 +11,17 @@ class Viewer
   def self.all
     @@all
   end
+
+  def Viewer_reviews 
+    @@all = []
+  end
+
+  def viewed_movies
+
+  end
+  def Viewer_reviewed_movie?(movie)
+   
+
+  end
   
 end
