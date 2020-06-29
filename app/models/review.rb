@@ -1,6 +1,7 @@
 class Review
 
-    attr_reader :movie, :viewer, :rating
+    attr_reader :movie, :viewer
+    attr_accessor :rating
     @@all = []
 
     def initialize(viewer, movie, rating)
@@ -15,7 +16,7 @@ class Review
     end
 
     # this are unneccessary because of the attr_reader but I wasn't sure if I needed to include them because of the deliverables?
-    
+
     # def viewer
     #     @viewer
     # end
