@@ -20,9 +20,15 @@ class Viewer
     reviews.map {|i| i.movie}
   end
 
-  # def reviewed_movie?(movie)
-  #
-  # end
+  def reviewed_movie?(movie)
+    Review.all.find do|i|
+      if i.movie == movie && i.viewer == self
+         return true
+      else
+        return false
+      end
+    end
+  end
 
 
 end

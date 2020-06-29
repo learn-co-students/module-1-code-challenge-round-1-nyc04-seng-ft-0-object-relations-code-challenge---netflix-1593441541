@@ -20,8 +20,20 @@ class Movie
     reviews.map {|i| i.viewer}
   end
 
-  # def average_rating
-  #   reviews.each {|i| binding.pry}
-  # end
+  def movie_ratings
+    reviews.map{|i| i.rating}
+  end
+
+  def average_rating
+    movie_ratings.inject(&:+).to_f / movie_ratings.size
+  end
+
+  # `Movie.highest_rated`
+  #   - returns the `Movie` instance with the
+  #   highest average rating.
+
+  def self.highest_rated
+
+  end
 
 end
