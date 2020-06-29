@@ -5,9 +5,13 @@ class Viewer
 
   def initialize(username)
     @username = username
-    self.class.all << self
+    save
   end
 
+  def save
+    self.class.all << self
+  end
+  
   def self.all
     @@all
   end

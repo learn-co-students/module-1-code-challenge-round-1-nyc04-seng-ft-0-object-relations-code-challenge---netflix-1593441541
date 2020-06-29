@@ -5,9 +5,13 @@ class Movie
 
   def initialize(title)
     @title = title
-    self.class.all << self
+    save
   end
 
+  def save
+    self.class.all << self
+  end
+  
   def self.all
     @@all
   end
