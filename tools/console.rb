@@ -20,13 +20,13 @@ viewer2 = Viewer.new("coolio2")
 viewer3 = Viewer.new("badbitch3")
 viewer4 = Viewer.new("moneylover99")
 
-review1 = Review.new(viewer1, avengers, 10)
-review2 = Review.new(viewer1, spiderman, 10)
-review3 = Review.new(viewer2, ironman, 10)
-review4 = Review.new(viewer2, spideyverse, 10)
-review5 = Review.new(viewer3, ironman, 10)
-review6 = Review.new(viewer3, avengers, 10)
-review7 = Review.new(viewer4, spideyverse, 10)
+review1 = Review.new(viewer1, avengers, 5)
+review2 = Review.new(viewer1, spiderman, 3)
+review3 = Review.new(viewer2, ironman, 4)
+review4 = Review.new(viewer2, spideyverse, 5)
+review5 = Review.new(viewer3, ironman, 3)
+review6 = Review.new(viewer3, avengers, 5)
+review7 = Review.new(viewer4, spideyverse, 4)
 
 
 
