@@ -1,7 +1,7 @@
 class Review
-
+    #attr_accessor will allow us to see either viewer or movie associated with review instance
     attr_accessor :viewer, :movie, :rating
- 
+    
     @@all = []
 
     def initialize (viewer, movie, rating)
@@ -16,8 +16,7 @@ class Review
     end
 
   
-    # - `Review#viewer`
-    # - returns the `Viewer` instance associated with the `Review` instance
+    
 
 
 

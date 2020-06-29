@@ -23,5 +23,13 @@ class Viewer
     reviews.map  {|review| review.movie }
   end
 
+  # - `Viewer#reviewed_movie?(movie)`
+  # - a `Movie` instance is the only argument
+  # - returns `true` if the `Viewer` has reviewed this `Movie` 
+  # (if there is a `Review` instance that has this `Viewer` and `Movie`), returns `false` otherwise
+  def reviewed_movie?(movie)
+   self.reviewed_movies.select {|reviewed| reviewed == movie }.reviewed_movie? 
+  end
+
   
 end

@@ -21,7 +21,8 @@ end
 #   - returns an array of all of the `Viewer` instances that reviewed the `Movie`.
 def reviewers
   reviews.map {|review| review.viewer}
-  
 end
+
+
 
 end
