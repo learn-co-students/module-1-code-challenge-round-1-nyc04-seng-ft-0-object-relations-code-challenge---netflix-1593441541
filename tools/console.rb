@@ -22,6 +22,7 @@ m3 = Movie.new("Clash of The Titans")
 r1 = Review.new(v1, m1, 5)
 r2 = Review.new(v2, m2, 7)
 r3 = Review.new(v1, m3, 6)
+r4 = Review.new(v2, m1, 4)
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
