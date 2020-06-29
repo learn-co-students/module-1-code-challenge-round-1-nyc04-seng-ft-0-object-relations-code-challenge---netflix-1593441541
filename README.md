@@ -8,6 +8,11 @@ A `Movie` has many `Review`s. A `Viewer` has many `Review`s. A `Review` belongs 
 
 `Viewer` - `Movie` is a many to many relationship.
 
+movie -< review
+viewer -< review
+
+viewer >-< movie
+
 **Note**: You should draw your domain on paper or on a whiteboard _before you start coding_. Remember to identify a single source of truth for your data.
 
 ## Topics
@@ -47,47 +52,47 @@ Some of the methods listed are provided to you in the starter code. You should c
 #### Movie
 
 - `Movie#initialize(title)`
-  - `Movie` is initialized with a title (string)
-  - title **can be** changed after the `Movie` is initialized
-- `Movie#title`
-  - returns the `Movie`'s title
-- `Movie.all`
-  - returns an array of all the `Movie` instances that have been initialized
+  <!-- - `Movie` is initialized with a title (string) -->
+  <!-- - title **can be** changed after the `Movie` is initialized -->
+<!-- - `Movie#title`
+  - returns the `Movie`'s title -->
+<!-- - `Movie.all`
+  - returns an array of all the `Movie` instances that have been initialized -->
 
 #### Viewer
 
-- `Viewer#initialize(username)`
+<!-- - `Viewer#initialize(username)`
   - `Viewer` is initialized with a username (string)
-  - username **can be** changed after the Viewer is initialized
-- `Viewer#username`
-  - returns the Viewer's username
-- `Viewer.all`
-  - returns an array of all the Viewer instances that have been initialized
+  - username **can be** changed after the Viewer is initialized -->
+<!-- - `Viewer#username`
+  - returns the Viewer's username -->
+<!-- - `Viewer.all`
+  - returns an array of all the Viewer instances that have been initialized -->
 
 #### Review
 
-- `Review#initialize(viewer, movie, rating)`
-  - `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a rating (number)
-- `Review#rating`
+<!-- - `Review#initialize(viewer, movie, rating)` -->
+  <!-- - `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a rating (number) -->
+<!-- - `Review#rating`
   - returns the rating for the `Review` instance
 - `Review.all`
-  - returns an array of all initialized `Review` instances
+  - returns an array of all initialized `Review` instances -->
 
 ### Object Relationship Methods
 
 #### Review
 
-- `Review#viewer`
+- `Review#viewer'
   - returns the `Viewer` instance associated with the `Review` instance
 - `Review#movie`
   - returns the `Movie` instance associated with the `Review` instance
 
 #### Viewer
 
-- `Viewer#reviews`
-  - returns an array of `Review` instances associated with the `Viewer` instance.
-- `Viewer#reviewed_movies`
-  - returns an array of `Movie` instances reviewed by the `Viewer` instance.
+<!-- - `Viewer#reviews`
+  - returns an array of `Review` instances associated with the `Viewer` instance. -->
+<!-- - `Viewer#reviewed_movies`
+  - returns an array of `Movie` instances reviewed by the `Viewer` instance. -->
 
 #### Movie
 

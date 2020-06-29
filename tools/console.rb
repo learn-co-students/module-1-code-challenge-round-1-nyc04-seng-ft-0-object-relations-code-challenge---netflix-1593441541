@@ -22,7 +22,7 @@ v3 = Viewer.new("david")
 
 r1 = Review.new(v1, m1, 4)
 r2 = Review.new(v1, m2, 3)
-r3 = Review.new(v3, m3, 5)
+r3 = Review.new(v3, m2, 5)
 
 
 
