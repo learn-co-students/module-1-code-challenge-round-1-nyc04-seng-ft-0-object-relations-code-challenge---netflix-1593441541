@@ -32,8 +32,8 @@ class Movie
   #   - returns the `Movie` instance with the
   #   highest average rating.
 
-  def self.highest_rated
-
-  end
+  # def self.highest_rated
+  # 
+  # end
 
 end
