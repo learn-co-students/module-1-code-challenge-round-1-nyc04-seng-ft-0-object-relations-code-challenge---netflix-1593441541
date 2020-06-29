@@ -27,6 +27,8 @@ review_5 = nancy.rate_movie(parasite, 6)
 review_6 = nancy.rate_movie(midsommar, 2)
 
 review_7 = henry.rate_movie(eternal, 6)
+review_8 = henry.rate_movie(midsommar, -8)
+review_9 = henry.rate_movie(parasite, 12)
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry

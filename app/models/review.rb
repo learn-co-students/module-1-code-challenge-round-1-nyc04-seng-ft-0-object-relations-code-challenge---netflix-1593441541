@@ -7,7 +7,15 @@ class Review
   def initialize(viewer, movie, rating)
     @viewer = viewer
     @movie = movie
-    @rating = rating
+
+    # taking into considering edge cases where user puts a negative value rating or a rating over 10
+    if rating < 0 
+      @rating = 0
+    elsif rating > 10
+      @rating = 10
+    else
+      @rating = rating
+    end
 
     @@all << self
   end

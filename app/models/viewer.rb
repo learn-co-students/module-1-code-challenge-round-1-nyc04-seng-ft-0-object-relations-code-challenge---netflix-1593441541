@@ -35,5 +35,4 @@ class Viewer
   def self.all
     @@all
   end
-  
 end
