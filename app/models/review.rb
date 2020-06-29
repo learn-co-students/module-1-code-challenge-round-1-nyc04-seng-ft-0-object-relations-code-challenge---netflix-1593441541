@@ -18,5 +18,5 @@ class Review
     end
 
     #returns the viewer who made this review
-
+    #note to Instructor: accidently skipped
 end

@@ -33,7 +33,8 @@ review3 = Review.new(viewer2, movie2, 1)
 # puts""
 # pp review1.movie
 # puts""
-# puts viewer1.reviews
+pp viewer1.reviews
+puts""
 pp viewer1.reviewed_movies
 #`Review#viewer`
 #  - return Viewr object not just the string

@@ -17,12 +17,18 @@ class Viewer
   
   #returns an array of all reviews the viewer made
   def reviews
-    Review.all.select {|review| review.viewer == self}
+    review = []
+    review = Review.all.select {|review| review.viewer == self}
   end
 
   #find all movies this viewer watched
   def reviewed_movies
-    review = Review.all.find_all {|review| review.viewer == self}
+    reviewed_movies = []
+    reviewed_movies = Review.all.each do |review|
+      if review.viewer == self
+        reviewed_movies << review.movie
+      end
+    end
+    reviewed_movies
   end
-
 end
