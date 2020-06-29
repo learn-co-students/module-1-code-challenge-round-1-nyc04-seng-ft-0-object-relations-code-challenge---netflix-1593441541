@@ -33,7 +33,7 @@ class Movie
 
   def self.highest_rated
     Movie.all.find|movie_instance|
-    movie_instance.max
+    movie_instance.
   end
 
   def self.all
