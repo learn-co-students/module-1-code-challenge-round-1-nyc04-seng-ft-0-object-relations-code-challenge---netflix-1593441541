@@ -13,6 +13,10 @@ class Viewer
     @@all
   end
 
+  def return_username
+    @username
+  end
+
   def change_username=(username)
     # Update viewer username value
     @username = username

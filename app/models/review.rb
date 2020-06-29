@@ -15,7 +15,7 @@ class Review
   end
 
   def return_rating
-    self.rating
+    @rating
   end
 
   def viewer

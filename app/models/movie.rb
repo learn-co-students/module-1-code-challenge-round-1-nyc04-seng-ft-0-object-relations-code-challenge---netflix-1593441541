@@ -13,6 +13,10 @@ class Movie
     @@all
   end
 
+  def return_title
+    @title
+  end
+
   def change_title=(title)
     # Update title value
     @title = title
