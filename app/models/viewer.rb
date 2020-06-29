@@ -30,5 +30,21 @@ class Viewer
     end
   end
 
+# I was trying to get the
+  def re_review(movie,rating)
+    Review.all.find do |i|
+      i.movie == movie
+      i.rating = rating
+    end
+  end
+
+  def rate_movie(movie,rating)
+    if reviewed_movie?(movie)
+      re_review(movie,rating)
+    else
+      Review.new(self, movie, rating)
+    end
+  end
+
 
 end
