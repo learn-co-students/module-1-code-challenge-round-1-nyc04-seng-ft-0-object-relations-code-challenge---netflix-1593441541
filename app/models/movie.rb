@@ -1,6 +1,3 @@
-# - `Movie#average_rating`
-#   - returns the average of all ratings for the `Movie` instance
-#   - to average ratings, add all ratings together and divide by the total number of ratings.
 # - `Movie.highest_rated`
 #   - returns the `Movie` instance with the highest average rating.
 
@@ -29,7 +26,17 @@ class Movie
   end
 
   def average_rating
-    sum = self.reviews.reduce(:+)
+    sum = self.reviews.reduce(0) do |sum, review_instance|
+      sum + review_instance.rating
+    end.to_f
+    sum/self.reviews.length
+  end
+
+  def self.highest_rated
+    Review.all.reduce do |max_rated_movie_review, review_instance|
+      binding.pry
+      max_rated_movie_review = max_rated_movie_review.rating < review_instance.rating ? review_instance : max_rated_movie_review
+    end
   end
 
 end
