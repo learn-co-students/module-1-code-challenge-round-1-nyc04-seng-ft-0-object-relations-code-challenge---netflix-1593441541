@@ -11,9 +11,21 @@ class Movie
   def save
     self.class.all << self
   end
-  
+
   def self.all
     @@all
+  end
+
+  def reviews
+    Review.all.select do |review|
+      review.movie == self
+    end
+  end
+
+  def reviewers
+    reviews.map do |review|
+      review.viewer
+    end
   end
 
 end
