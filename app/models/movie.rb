@@ -23,4 +23,17 @@ class Movie
       v.viewer
     end
   end
+
+  def average_rating
+    sum_rating = 0
+    self.reviews.map do |r|
+      r.rating += sum_rating
+      average_rating = sum_rating / sum_rating.size.to_f
+    end
+    average_rating
+  end
+
+  def self.highest_rated
+    self.reviews.max_by{|reviews| reviews.review}
+  end
 end
