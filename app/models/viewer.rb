@@ -31,7 +31,7 @@ class Viewer
   end
 
   def reviewed_movie?(movie)
-    if self.reviews.include?(movie)
+    if self.reviewed_movies.include?(movie)
       p "true"
     else
       p "false"
