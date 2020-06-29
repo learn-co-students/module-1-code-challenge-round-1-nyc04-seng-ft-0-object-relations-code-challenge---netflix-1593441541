@@ -17,6 +17,7 @@ malcolm_x_movie = Movie.new("Malcolm X")
 threecee = Viewer.new("threecee")
 man = Viewer.new("The Man")
 
+threecee_malcolmx_review = Review.new(threecee, malcolm_x_movie, 100)
 threecee_contact_review = Review.new(threecee, contact_movie, 99)
 threecee_spacejam_review = Review.new(threecee, spacejam_movie, 2)
 
@@ -34,6 +35,11 @@ pp Review.find_reviews_by_movie(spacejam_movie)
 
 puts "\n#{spacejam_movie.title} Reviewers:"
 pp spacejam_movie.reviewers
+
+puts "#{spacejam_movie.title} Average Rating #{spacejam_movie.average_rating}"
+puts "#{malcolm_x_movie.title} Average Rating #{malcolm_x_movie.average_rating}"
+puts "#{contact_movie.title} Average Rating #{contact_movie.average_rating}"
+
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
