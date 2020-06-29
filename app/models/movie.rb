@@ -34,4 +34,9 @@ class Movie
   def self.most_reviewed
     all.max_by { |movie| movie.reviews.count }
   end
+
+  def self.best_movies # movies rated 5
+    reviews_with_5 = Review.all.select { |review| review.rating == 5 }
+    reviews_with_5.map { |review| review.movie }.uniq
+  end
 end

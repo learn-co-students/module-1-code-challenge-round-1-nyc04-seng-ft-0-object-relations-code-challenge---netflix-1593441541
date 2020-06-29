@@ -38,4 +38,8 @@ class Viewer
     highest_review = reviews.max_by { |review| review.rating }
     highest_review.movie
   end
+
+  def self.most_active_reviewer
+    all.max_by { |viewer| viewer.reviews.count }
+  end
 end
