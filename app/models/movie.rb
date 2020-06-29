@@ -1,6 +1,3 @@
-# - `Movie.highest_rated`
-#   - returns the `Movie` instance with the highest average rating.
-
 require_relative "./review.rb"
 
 class Movie
@@ -34,7 +31,6 @@ class Movie
 
   def self.highest_rated
     Review.all.reduce do |max_rated_movie_review, review_instance|
-      binding.pry
       max_rated_movie_review = max_rated_movie_review.rating < review_instance.rating ? review_instance : max_rated_movie_review
     end
   end
