@@ -20,7 +20,7 @@ class Viewer
 # - `Viewer#reviewed_movies`
 #   - returns an array of `Movie` instances reviewed by the `Viewer` instance.
   def reviewed_movies
-    reviews
+    reviews.map  {|review| review.movie }
   end
 
   
