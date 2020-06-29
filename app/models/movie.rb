@@ -1,7 +1,8 @@
-# - `Movie#reviews`
-#   - returns an array of all the `Review` instances for the `Movie`.
-# - `Movie#reviewers`
-#   - returns an array of all of the `Viewer` instances that reviewed the `Movie`.
+# - `Movie#average_rating`
+#   - returns the average of all ratings for the `Movie` instance
+#   - to average ratings, add all ratings together and divide by the total number of ratings.
+# - `Movie.highest_rated`
+#   - returns the `Movie` instance with the highest average rating.
 
 require_relative "./review.rb"
 
@@ -25,6 +26,10 @@ class Movie
 
   def reviewers
     Review.find_viewers_by_movie(self)
+  end
+
+  def average_rating
+    sum = self.reviews.reduce(:+)
   end
 
 end
