@@ -14,5 +14,13 @@ class Review
         @@all
     end
 
+    def viewer
+        Review.new.viewer(username)
+    end
+
+    def movie
+        Review.new.movie
+    end
+
 
 end
