@@ -11,5 +11,9 @@ class Viewer
   def self.all
     @@all
   end
+
+  #returns an array of `Review` instances associated with the `Viewer` 
+
+  #returns an array of `Movie` instances reviewed by the `Viewer` instance.
   
 end
