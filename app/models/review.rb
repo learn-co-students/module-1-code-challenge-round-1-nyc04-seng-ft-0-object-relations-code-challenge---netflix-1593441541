@@ -2,10 +2,7 @@ require 'pry'
 
 class Review
 
-    #- `Review#viewer`
-    #- returns the `Viewer` instance associated with the `Review` instance
-  #- `Review#movie`
-   # - returns the `Movie` instance associated with the `Review` instance
+
   
     
     @@all = []
