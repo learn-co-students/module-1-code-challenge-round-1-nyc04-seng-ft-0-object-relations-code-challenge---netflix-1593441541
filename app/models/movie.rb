@@ -42,9 +42,9 @@ class Movie
     # get the average of every movie >> save that
     # create a hash with movie and its average rating
     # sorty_by the average rating
-     return the last ke
+    #  return the last key
     
-      
+      # NOTHING IS RUNNING AND IDK WHY T T
     end
   end
 
