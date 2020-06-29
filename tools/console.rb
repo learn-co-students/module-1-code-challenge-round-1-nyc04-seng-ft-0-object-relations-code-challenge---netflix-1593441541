@@ -13,6 +13,11 @@ end
 # username
 v1 = Viewer.new("Zeus_The_Mighty")
 
+#title
+m1 = Movie.new("Percy Jacson")
+
+#viewer, movie, rating
+r1 = Review.new(v1, m1, 5)
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
