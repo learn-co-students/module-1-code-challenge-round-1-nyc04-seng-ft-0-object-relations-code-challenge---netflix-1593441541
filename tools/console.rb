@@ -12,12 +12,16 @@ end
 
 # username
 v1 = Viewer.new("Zeus_The_Mighty")
-
+v2 = Viewer.new("Hades_Just_Hades")
 #title
 m1 = Movie.new("Percy Jacson")
+m2 = Movie.new("Troy")
+m3 = Movie.new("Clash of The Titans")
 
 #viewer, movie, rating
 r1 = Review.new(v1, m1, 5)
+r2 = Review.new(v2, m2, 7)
+r3 = Review.new(v1, m3, 6)
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
